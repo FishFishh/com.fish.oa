@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="com.fish.oa:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/com_fish_oa_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="com.fish.oa/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="com.fish.oa" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
