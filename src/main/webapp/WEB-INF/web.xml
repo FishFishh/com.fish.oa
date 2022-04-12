@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <servlet>
-        <!--FreemakrerServlet用于读取解析ftl文件-->
-        <servlet-name>freemakrer</servlet-name>
+        <!--FreemarkerServlet用于读取解析ftl文件-->
+        <servlet-name>freemarker</servlet-name>
         <servlet-class>freemarker.ext.servlet.FreemarkerServlet</servlet-class>
         <!-- 定义模板的存储路径 -->
         <init-param>
@@ -19,7 +19,7 @@
         </init-param>
     </servlet>
     <servlet-mapping>
-        <servlet-name>freemakrer</servlet-name>
+        <servlet-name>freemarker</servlet-name>
         <url-pattern>*.ftl</url-pattern>
     </servlet-mapping>
 </web-app>
