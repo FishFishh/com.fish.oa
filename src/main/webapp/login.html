@@ -5,10 +5,11 @@
     <title>基于慕课网网课的办公OA系统</title>
     <link rel="stylesheet" href="/resources/layui/css/layui.css">
     <style>
-        body{
+        body {
             background-color: #2D93CA;
         }
-        .oa-container{
+
+        .oa-container {
             background-color: white;
             position: absolute;
             width: 400px;
@@ -19,7 +20,8 @@
             margin-left: -200px;
             margin-top: -175px;
         }
-        #username,#password{
+
+        #username, #password {
             text-align: center;
             font-size: 24px;
         }
@@ -27,14 +29,16 @@
 </head>
 <body>
 <div class="oa-container">
-    <h1 style="text-align: center;margin-bottom: 20px">fishcopy慕课网课视频OA系统</h1>
+    <h1 style="text-align: center;margin-bottom: 20px">fish-copy慕课网课视频OA系统</h1>
     <form class="layui-from">
         <div class="layui-form-item">
-            <input type="text" id="username" name="username" lay-verify="required" placeholder="在这里输入用户名喔" autocomplete="off" class="layui-input">
+            <input type="text" id="username" name="username" lay-verify="required" placeholder="在这里输入用户名喔"
+                   autocomplete="off" class="layui-input">
         </div>
 
         <div class="layui-form-item">
-            <input type="password" id="password" name="password" lay-verify="required" placeholder="在这里输入密码耶" autocomplete="off" class="layui-input">
+            <input type="password" id="password" name="password" lay-verify="required" placeholder="在这里输入密码耶"
+                   autocomplete="off" class="layui-input">
         </div>
 
         <div class="layui-form-item">
@@ -45,21 +49,21 @@
 <script src="/resources/layui/layui.all.js"></script>
 <script>
     // 表单提交事件
-    layui.form.on("submit(login)" , function(formdata){//data参数包含了当前表单的数据
+    layui.form.on("submit(login)", function (formdata) {//data 参数包含了当前表单的数据
         console.log(formdata);
         //发送ajax请求进行登录校验
         layui.$.ajax({
-            url : "/check_login",
-            data : formdata.field, //提交表单数据
-            type : "post",
-            dataType : "json" ,
-            success : function(json){
+            url: "/check_login",
+            data: formdata.field, //提交表单数据
+            type: "post",
+            dataType: "json",
+            success: function (json) {
                 console.log(json);
-                if(json.code == "0"){ //登录校验成功
+                if (json.code == "0") { //登录校验成功
                     // layui.layer.msg("登录成功");
                     //跳转url
-                    window.location.href=json.redirect_url;
-                }else{
+                    window.location.href = json.redirect_url;
+                } else {
                     layui.layer.msg(json.message);
                 }
             }
