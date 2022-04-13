@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基于慕课网网课的办公OA系统</title>
+    <link rel="stylesheet" href="/resources/layui/css/layui.css">
+    <style>
+        body{
+            background-color: #2D93CA;
+        }
+        .oa-container{
+            background-color: white;
+            position: absolute;
+            width: 400px;
+            height: 350px;
+            top: 50%;
+            left: 50%;
+            padding: 20px;
+            margin-left: -200px;
+            margin-top: -175px;
+        }
+        #username,#password{
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+<div class="oa-container">
+    <h1 style="text-align: center;margin-bottom: 20px">鱼根据网课视频写的OA系统</h1>
+    <form class="layui-from">
+        <div class="layui-form-item">
+            <input type="text" id="username" name="username" placeholder="在这里输入用户名喔" autocomplete="off" class="layui-input">
+        </div>
+
+        <div class="layui-form-item">
+            <input type="password" id="password" name="password" placeholder="在这里输入密码耶" autocomplete="off" class="layui-input">
+        </div>
+
+        <div class="layui-form-item">
+            <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="login">登录</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

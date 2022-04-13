@@ -11,7 +11,7 @@
         <!--开发环境配置-->
         <environment id="dev">
             <!--事务管理器采用JDBC方式-->
-            <transactionManager type="JDBC"></transactionManager>
+            <transactionManager type="JDBC"> </transactionManager>
             <!--利用Mybatis自带连接池管理连接
             <dataSource type="POOLED">-->
             <!--MyBatis与Druid的整合-->
