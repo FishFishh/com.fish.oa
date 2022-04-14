@@ -32,15 +32,11 @@
     <h1 style="text-align: center;margin-bottom: 20px">fish-copy慕课网课视频OA系统</h1>
     <form class="layui-from">
         <div class="layui-form-item">
-            <input type="text" id="username" name="username" lay-verify="required" placeholder="在这里输入用户名喔"
-                   autocomplete="off" class="layui-input">
+            <input type="text" id="username" name="username" lay-verify="required" placeholder="在这里输入用户名捏" autocomplete="off" class="layui-input">
         </div>
-
         <div class="layui-form-item">
-            <input type="password" id="password" name="password" lay-verify="required" placeholder="在这里输入密码耶"
-                   autocomplete="off" class="layui-input">
+            <input type="password" id="password" name="password" lay-verify="required" placeholder="在这里输入密码耶" autocomplete="off" class="layui-input">
         </div>
-
         <div class="layui-form-item">
             <button class="layui-btn layui-btn-fluid" lay-submit lay-filter="login">登录</button>
         </div>
@@ -68,7 +64,7 @@
                 }
             }
         })
-        return false;//submit提交事件返回true则表单提交,false则阻止表单提交
+        return false;//submit提交事件返回true则表单提交,false则阻止表单提交,true的话ajax就会失效
     })
 </script>
 </body>
