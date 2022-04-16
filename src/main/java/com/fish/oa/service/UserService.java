@@ -1,5 +1,6 @@
 package com.fish.oa.service;
 
+import com.fish.oa.dao.RbacDao;
 import com.fish.oa.dao.UserDao;
 import com.fish.oa.entity.Node;
 import com.fish.oa.entity.User;
@@ -12,6 +13,7 @@ import java.util.List;
  */
 public class UserService {
     private UserDao userDao = new UserDao();
+    private RbacDao rbacDao = new RbacDao();
  //   private RbacDao rbacDao = new RbacDao();
     /**
      * 根据前台输入进行登录校验
@@ -34,6 +36,7 @@ public class UserService {
         return user;
     }
     public List<Node> selectNodeByUserId(Long userId){
-
+        List<Node> nodeList = rbacDao.selectNodeByUserId(userId);
+        return nodeList;
     }
 }

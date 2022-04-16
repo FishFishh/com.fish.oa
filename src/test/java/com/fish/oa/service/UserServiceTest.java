@@ -1,6 +1,7 @@
 package com.fish.oa.service;
 
 
+import com.fish.oa.entity.Node;
 import com.fish.oa.entity.User;
 //import com.fish.oa.entity.Node;
 import org.junit.Test;
@@ -24,12 +25,10 @@ public class UserServiceTest {
         User user = userService.checkLogin("m8", "test");
         System.out.println(user);
     }
-/*
+
     @Test
     public void selectNodeByUserId(){
         List<Node> nodeList = userService.selectNodeByUserId(2l);
         System.out.println(nodeList);
     }
-
- */
 }
