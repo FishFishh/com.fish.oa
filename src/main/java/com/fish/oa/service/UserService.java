@@ -1,8 +1,12 @@
 package com.fish.oa.service;
 
 import com.fish.oa.dao.UserDao;
+import com.fish.oa.entity.Node;
 import com.fish.oa.entity.User;
 import com.fish.oa.service.exception.BussinessException;
+
+import java.util.List;
+
 /**
  * 用户服务
  */
@@ -24,8 +28,12 @@ public class UserService {
             throw new BussinessException("L001","用户名不存在");
         }
         if(!password.equals(user.getPassword())){
+            //密码错误的情况
             throw new BussinessException("L002","密码错误");
         }
         return user;
+    }
+    public List<Node> selectNodeByUserId(Long userId){
+
     }
 }
