@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
             User user = userService.checkLogin(username, password);
             result.put("code","0");
             result.put("message","success");
-            result.put("redirect_url","/index");//由jassion直接返回给客户端
+            result.put("redirect_url","/index");//由json直接返回给客户端
         }catch(BussinessException ex){
             logger.error(ex.getMessage(),ex);
             result.put("code",ex.getCode());
