@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet {
             User user = userService.checkLogin(username, password);
             result.put("code","0");
             result.put("message","success");
+            result.put()
         }catch(BussinessException ex){
             logger.error(ex.getMessage(),ex);
             result.put("code",ex.getCode());
