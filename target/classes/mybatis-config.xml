@@ -18,7 +18,7 @@
             <dataSource type="com.fish.oa.datasource.DruidDataSourceFactory">
                 <!--JDBC连接属性-->
                 <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/fish-oa ? useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true"/><!--url是数据库连接字符串 和一系列的连接参数-->
+                <property name="url" value="jdbc:mysql://localhost:3306/fish-oa?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true"/><!--url是数据库连接字符串 和一系列的连接参数-->
                 <property name="username" value="root"/>
                 <property name="password" value="214057"/>
                 <!--连接池初始连接数-->
