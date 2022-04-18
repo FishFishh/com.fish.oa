@@ -31,22 +31,26 @@ public class LoginServlet extends HttpServlet {
         try {
             //调用业务逻辑
             User user = userService.checkLogin(username, password);
-            result.put("code","0");
-            result.put("message","success");
-            result.put("redirect_url","/index");//由json直接返回给客户端
-        }catch(BussinessException ex){
-            logger.error(ex.getMessage(),ex);
-            result.put("code",ex.getCode());
-            result.put("message",ex.getMessage());
+            HttpSession session = request.getSession();
+            //向session存入登录用户信息,属性名:login_user
+            session.setAttribute("login_user" , user);
+            result.put("code", "0");
+            result.put("message", "success");
+            result.put("redirect_url", "/index");//由json直接返回给客户端
+        }catch (BussinessException ex){
+            logger.error(ex.getMessage() , ex);
+            result.put("code", ex.getCode());
+            result.put("message", ex.getMessage());
         }catch (Exception ex){
-            logger.error(ex.getMessage(),ex);
-            result.put("code",ex.getClass().getSimpleName());//得到它的类，将类名作为编码
-            result.put("message",ex.getMessage());
+            logger.error(ex.getMessage() , ex);
+            result.put("code", ex.getClass().getSimpleName());//得到它的类，将类名作为编码
+            result.put("message", ex.getMessage());
         }
         //返回对应结果
         String json = JSON.toJSONString(result);
         response.getWriter().println(json);
     }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
