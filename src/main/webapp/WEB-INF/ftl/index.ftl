@@ -22,11 +22,11 @@
                     <span class="layui-icon layui-icon-user" style="font-size: 20px">
                     </span>
                     <!--用户信息-->
-                    姓名[部门-职务]
+                    ${current_employee.name}[${current_department.departmentName}-${current_employee.title}]
                 </a>
             </li>
             <!--注销按钮-->
-            <li class="layui-nav-item"><a href="#">注销</a></li>
+            <li class="layui-nav-item"><a href="/logout">注销</a></li>
         </ul>
     </div>
     <!--左侧菜单栏-->
@@ -50,25 +50,6 @@
                 </dd>
                 </#if>
             </#list>
-                <dd class="function" data-parent-id="1">
-                    <a href="javascript:void(0)" target="ifmMain">功能2</a>
-                </dd>
-                <dd class="function" data-parent-id="1">
-                    <a href="javascript:void(0)" target="ifmMain">功能3</a>
-                </dd>
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a href="javascript:void(0)">模块2</a>
-                    <dl class="layui-nav-child module" data-node-id="2"></dl>
-                </li>
-                <dd class="function" data-parent-id="2">
-                    <a href="javascript:void(0)" target="ifmMain">功能3</a>
-                </dd>
-                <dd class="function" data-parent-id="2">
-                    <a href="javascript:void(0)" target="ifmMain">功能4</a>
-                </dd>
-                <dd class="function" data-parent-id="2">
-                    <a href="javascript:void(0)" target="ifmMain">功能5</a>
-                </dd>
             </ul>
         </div>
     </div>
