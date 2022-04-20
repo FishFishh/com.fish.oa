@@ -36,8 +36,9 @@
             <!--可折叠导航栏-->
             <ul class="layui-nav layui-nav-tree">
                 <#list node_list as code>
-                <!--父节点-->
+
                     <#if node.nodeType == 1>
+                        <!--父节点-->
                 <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:void(0)">${node.nodeName}</a>
                     <dl class="layui-nav-child module" data-node-id="${node.nodeId}"></dl>
@@ -59,7 +60,7 @@
     </div>
     <!--版权信息-->
     <div class="layui-footer">
-        Copyright © imooc. All Rights Reserved.
+        Copyby imooc. The Bad Fish.
     </div>
 </div>
 <!--LayUI JS文件-->
@@ -70,7 +71,7 @@
         var func = layui.$(this);
         var parentId = func.data("parent-id");
         layui.$("dl[data-node-id=" + parentId + "]").append(func);
-    })
+    });
     //刷新折叠菜单
     layui.element.render('nav');
 </script>
